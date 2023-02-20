@@ -178,5 +178,3 @@ if selected == "Contact Me":
             st.markdown(contact_form, unsafe_allow_html=True)
         with right_col:
             st.empty()
-            # st.markdown(contact_form, unsafe_allow_html=True)
-
