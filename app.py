@@ -65,7 +65,7 @@ if selected == "Home":
         st.subheader("Company : [HCL Technologies](https://www.hcltech.com/)")
 
     with desc_hcl:
-        st.subheader("Desination : Senior Developer")
+        st.subheader("Designation : Senior Developer")
         st.write(
             """
             - ✔️ Produced robust, accurate code that minimized production issues.
@@ -83,7 +83,7 @@ if selected == "Home":
         st.subheader("Company : [Ranstad India](https://www.randstad.in/)")
 
     with desc_ora:
-        st.subheader("Desination : PL/SQL Developer")
+        st.subheader("Designation : PL/SQL Developer")
         st.write(
             """
             - ✔️ Analyzed existing SQL queries to identify opportunities for improvements.
@@ -97,23 +97,25 @@ if selected == "Home":
             - ✔️ Followed standard practices for migrating changes to test and production environments.
             """
         )
-    year_cs, desc_cs = st.columns(2)
 
-    with year_cs:
-        st.subheader("Oct-2004 - Jun-2012")
-        st.subheader("Company : [CSS Technergy Limited](http://cosyn.in/)")
+    # year_cs, desc_cs = st.columns(2)
+    #
+    # with year_cs:
+    #     st.subheader("Oct-2004 - Jun-2012")
+    #     st.subheader("Company : [CSS Technergy Limited](http://cosyn.in/)")
+    #
+    # with desc_cs:
+    #     st.subheader("Designation : Programmer")
+    #     st.write(
+    #         """
+    #         - ✔️ Worked with software development and testing team members to design and develop robust solutions to meet client requirements for functionality, scalability, and performance.
+    #         - ✔️ Tested server code to validate code changes.
+    #         - ✔️ Improved software efficiency by creating automated scripts and tools.
+    #         - ✔️ Created databases, data entry systems, and other applications for diverse uses.
+    #         - ✔️ Analyzed, reviewed and revised programs to increase operating efficiency.
+    #         """
+    #     )
 
-    with desc_cs:
-        st.subheader("Desination : Programmer")
-        st.write(
-            """
-            - ✔️ Worked with software development and testing team members to design and develop robust solutions to meet client requirements for functionality, scalability, and performance.
-            - ✔️ Tested server code to validate code changes.
-            - ✔️ Improved software efficiency by creating automated scripts and tools.
-            - ✔️ Created databases, data entry systems, and other applications for diverse uses.
-            - ✔️ Analyzed, reviewed and revised programs to increase operating efficiency.
-            """
-        )
 if selected == "Custom Projects":
     import streamlit as st
     import pandas
