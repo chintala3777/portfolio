@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas
 from streamlit_option_menu import option_menu
+from send_email import send_email
+
 
 st.set_page_config(page_title="Personal Portfolio", layout="wide")
 selected = option_menu(
@@ -112,30 +114,27 @@ if selected == "Home":
             - ✔️ Followed standard practices for migrating changes to test and production environments.
             """
         )
-        st.write("---")
+    st.write("---")
 
-    # year_cs, desc_cs = st.columns(2)
-    #
-    # with year_cs:
-    #     st.subheader("Oct-2004 - Jun-2012")
-    #     st.subheader("Company : [CSS Technergy Limited](http://cosyn.in/)")
-    #
-    # with desc_cs:
-    #     st.subheader("Designation : Programmer")
-    #     st.write(
-    #         """
-    #         - ✔️ Worked with software development and testing team members to design and develop robust solutions to meet client requirements for functionality, scalability, and performance.
-    #         - ✔️ Tested server code to validate code changes.
-    #         - ✔️ Improved software efficiency by creating automated scripts and tools.
-    #         - ✔️ Created databases, data entry systems, and other applications for diverse uses.
-    #         - ✔️ Analyzed, reviewed and revised programs to increase operating efficiency.
-    #         """
-    #     )
+    year_cs, desc_cs = st.columns(2)
+
+    with year_cs:
+        st.subheader("Oct-2004 - Jun-2012")
+        st.subheader("Company : [CSS Technergy Limited](http://cosyn.in/)")
+
+    with desc_cs:
+        st.subheader("Designation : Programmer")
+        st.write(
+            """
+            - ✔️ Worked with software development and testing team members to design and develop robust solutions to meet client requirements for functionality, scalability, and performance.
+            - ✔️ Tested server code to validate code changes.
+            - ✔️ Improved software efficiency by creating automated scripts and tools.
+            - ✔️ Created databases, data entry systems, and other applications for diverse uses.
+            - ✔️ Analyzed, reviewed and revised programs to increase operating efficiency.
+            """
+        )
 
 if selected == "Custom Projects":
-    import streamlit as st
-    import pandas
-
     contact_content = """
     Below you can find some of apps i have built in python. Feel free to contact me!
     """
@@ -159,11 +158,25 @@ if selected == "Custom Projects":
             st.image("images/" + row["image"])
             st.write(f"[Source Code]({row['url']})")
 
-if selected == "Contact Me":
-    with st.container():
-        st.write("---")
-        st.header("Get In Touch With Me")
-        st.write("##")
+# if selected == "Contact Me":
+#     with st.container():
+#         st.write("---")
+#         st.header("Get In Touch With Me")
+#         st.write("##")
+#
+#         with st.form(key="email_form"):
+#             user_email = st.text_input("Email", placeholder="Your email")
+#             raw_message = st.text_area("Message", placeholder="Your message here")
+#             message = f"""\
+# Subject: New email from {user_email}
+#
+# From: {user_email}
+# {raw_message}
+#             """
+#             user_btn = st.form_submit_button("Submit")
+#             if user_btn:
+#                 send_email(message)
+
         contact_form = """
                         <form action="https://formsubmit.co/chintala.chaitanya@yahoo.com" method="POST">
                         <input type = "hidden" name = "_captcha" value="false">
