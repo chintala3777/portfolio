@@ -26,7 +26,7 @@ if selected == "Home":
         st.image("images/profilephoto.png", width=380)
     with desc_col:
         st.title("Chaitanya Chintala")
-
+        #
         # st.download_button(label='Download Resume',
         #                    data=open('images/Chaitanya_Chintala_Resume.pdf', 'rb').read(),
         #                    file_name='images/Chaitanya_Chintala_Resume.pdf',
@@ -98,8 +98,8 @@ if selected == "Home":
             - ✔️ Followed standard practices for migrating changes to test and production environments.
             """
         )
-    year_cs, desc_cs = st.columns(2)
-
+    # year_cs, desc_cs = st.columns(2)
+    #
     # with year_cs:
     #     st.subheader("Oct-2004 - Jun-2012")
     #     st.subheader("Company : [CSS Technergy Limited](http://cosyn.in/)")
