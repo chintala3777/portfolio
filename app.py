@@ -3,22 +3,22 @@ import pandas
 from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="Personal Portfolio", layout="wide")
-
 selected = option_menu(
     menu_title=None,
     options=["Home", "Custom Projects", "Contact Me"],
     orientation="horizontal",
+    icons=["house", "book", "envelope"],
+    menu_icon="cast",
+    default_index=0,
 )
 
-hide_st_style = """
-                <style>
-                 #MainMenu {visibility: hidden;}
-                 footer {visibility: hidden;}
-                 header {visibility: hidden;}
-                 </style>   
-                """
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.markdown(hide_st_style, unsafe_allow_html=True)
+
+local_css("style/sytle.css")
+
 
 if selected == "Home":
     photo_col, desc_col = st.columns(2)
@@ -36,8 +36,10 @@ if selected == "Home":
                         Hi, I am Chaitanya! 4 years Working experience as Industrious Senior Consultant with excellent critical thinking and team-building talents.Having total 14 years of IT experience in Multi-tasking Consultant well-known for successfully taking projects from beginning stages to completion. I am a Big Data Analyst, Python programmer, Oracle Apps R12 Developer, Oracle PLSQL Developer and so on. I graduated in 2003 with a Bachelor of Computer Applications from the Nagarjuna University,Guntur,Andhra Pradesh, India.
                     """
         st.info(desc_content)
+    st.write("---")
 
     st.subheader("Work History")
+    st.write("---")
 
     year_vir, desc_vir = st.columns(2)
 
@@ -56,6 +58,7 @@ if selected == "Home":
             - ✔️ Exceeded customer requirements with accurate and deliverable solutions.
             """
         )
+    st.write("---")
 
     year_hcl, desc_hcl = st.columns(2)
 
@@ -75,6 +78,8 @@ if selected == "Home":
             - ✔️ Discussed project progress with customers, collected feedback on different stages and directly addressed concerns.
             """
         )
+    st.write("---")
+
     year_ora, desc_ora = st.columns(2)
 
     with year_ora:
@@ -96,6 +101,7 @@ if selected == "Home":
             - ✔️ Followed standard practices for migrating changes to test and production environments.
             """
         )
+        st.write("---")
 
     # year_cs, desc_cs = st.columns(2)
     #
@@ -143,4 +149,23 @@ if selected == "Custom Projects":
             st.write(f"[Source Code]({row['url']})")
 
 if selected == "Contact Me":
-    st.header("hhhhhhhhh")
+    with st.container():
+        st.write("---")
+        st.header("Get In Touch With Me")
+        st.write("##")
+        contact_form = """
+                        <form action="https://formsubmit.co/chintala.chaitanya@yahoo.com" method="POST">
+                        <input type = "hidden" name = "_captcha" value="false">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="message" placeholder="Your message here" required></textarea>
+                        <button type="submit">Send</button>
+                        </form>
+                    """
+        left_col, right_col = st.columns(2)
+        with left_col:
+            st.markdown(contact_form, unsafe_allow_html=True)
+        with right_col:
+            st.empty()
+            # st.markdown(contact_form, unsafe_allow_html=True)
+
