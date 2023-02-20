@@ -178,7 +178,7 @@ if selected == "Custom Projects":
 #                 send_email(message)
 
         contact_form = """
-                        <form action="https://formsubmit.co/chintala.chaitanya@yahoo.com" method="POST">
+                        <form action="https://formsubmit.co/pyapps81@gmail.com" method="POST">
                         <input type = "hidden" name = "_captcha" value="false">
                         <input type="text" name="name" placeholder="Your name" required>
                         <input type="email" name="email" placeholder="Your email" required>
