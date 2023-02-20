@@ -9,6 +9,7 @@ selected = option_menu(
     options=["Home", "Custom Projects", "Contact Me"],
     orientation="horizontal",
 )
+
 hide_st_style = """
                 <style>
                  #MainMenu {visibility: hidden;}
