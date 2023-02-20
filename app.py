@@ -9,15 +9,15 @@ selected = option_menu(
     options=["Home", "Custom Projects", "Contact Me"],
     orientation="horizontal",
 )
-# hide_st_style = """
-#                 <style>
-#                  #MainMenu {visibility: hidden;}
-#                  footer {visibility: hidden;}
-#                  header {visibility: hidden;}
-#                  </style>
-#                 """
-#
-# st.markdown(hide_st_style, unsafe_allow_html=True)
+hide_st_style = """
+                <style>
+                 #MainMenu {visibility: hidden;}
+                 footer {visibility: hidden;}
+                 header {visibility: hidden;}
+                 </style>   
+                """
+
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 if selected == "Home":
     photo_col, desc_col = st.columns(2)
