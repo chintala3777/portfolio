@@ -158,25 +158,6 @@ if selected == "Custom Projects":
             st.image("images/" + row["image"])
             st.write(f"[Source Code]({row['url']})")
 
-# if selected == "Contact Me":
-#     with st.container():
-#         st.write("---")
-#         st.header("Get In Touch With Me")
-#         st.write("##")
-#
-#         with st.form(key="email_form"):
-#             user_email = st.text_input("Email", placeholder="Your email")
-#             raw_message = st.text_area("Message", placeholder="Your message here")
-#             message = f"""\
-# Subject: New email from {user_email}
-#
-# From: {user_email}
-# {raw_message}
-#             """
-#             user_btn = st.form_submit_button("Submit")
-#             if user_btn:
-#                 send_email(message)
-
         contact_form = """
                         <form action="https://formsubmit.co/pyapps81@gmail.com" method="POST">
                         <input type = "hidden" name = "_captcha" value="false">
