@@ -44,6 +44,7 @@ if selected == "Home":
                         I graduated with a Master of Computer Applications
                         from the Nagarjuna University,Guntur,Andhra Pradesh, India.
                     """
+
         st.info(desc_content)
     st.write("---")
 
