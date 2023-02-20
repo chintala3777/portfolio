@@ -33,9 +33,8 @@ if selected == "Home":
                            mime='images/Chaitanya_Chintala_Resume.pdf')
 
         desc_content = """
-        Hi, I am Chaitanya! 4 years Working experience as Industrious Senior Consultant with excellent critical thinking and team-building talents.Having total 14 years of IT experience in Multi-tasking Consultant well-known for successfully taking projects from beginning stages to completion. I am a Big Data Analyst, Python programmer, Oracle Apps R12 Developer, Oracle PLSQL Developer and so on. I graduated in 2003 with a Bachelor of Computer Applications from the Nagarjuna University,Guntur,Andhra Pradesh, India.
-        I have worked with the various companies like Virtusa Corporation (Current Company),HCL,Randstad India (Client : Oracle India),CSS Technergy Limited (Currently known as Cosyn)
-        """
+                        Hi, I am Chaitanya! 4 years Working experience as Industrious Senior Consultant with excellent critical thinking and team-building talents.Having total 14 years of IT experience in Multi-tasking Consultant well-known for successfully taking projects from beginning stages to completion. I am a Big Data Analyst, Python programmer, Oracle Apps R12 Developer, Oracle PLSQL Developer and so on. I graduated in 2003 with a Bachelor of Computer Applications from the Nagarjuna University,Guntur,Andhra Pradesh, India.
+                    """
         st.info(desc_content)
 
     st.subheader("Work History")
