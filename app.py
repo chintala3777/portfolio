@@ -26,12 +26,11 @@ if selected == "Home":
         st.image("images/profilephoto.png", width=380)
     with desc_col:
         st.title("Chaitanya Chintala")
-        #
-        # st.download_button(label='Download Resume',
-        #                    data=open('images/Chaitanya_Chintala_Resume.pdf', 'rb').read(),
-        #                    file_name='images/Chaitanya_Chintala_Resume.pdf',
-        #                    mime='images/Chaitanya_Chintala_Resume.pdf'
-        #                    )
+
+        st.download_button(label='Download Resume',
+                           data=open('images/Chaitanya_Chintala_Resume.pdf', 'rb').read(),
+                           file_name='images/Chaitanya_Chintala_Resume.pdf',
+                           mime='images/Chaitanya_Chintala_Resume.pdf')
 
         desc_content = """
         Hi, I am Chaitanya! 4 years Working experience as Industrious Senior Consultant with excellent critical thinking and team-building talents.Having total 14 years of IT experience in Multi-tasking Consultant well-known for successfully taking projects from beginning stages to completion. I am a Big Data Analyst, Python programmer, Oracle Apps R12 Developer, Oracle PLSQL Developer and so on. I graduated in 2003 with a Bachelor of Computer Applications from the Nagarjuna University,Guntur,Andhra Pradesh, India.
@@ -98,23 +97,23 @@ if selected == "Home":
             - ✔️ Followed standard practices for migrating changes to test and production environments.
             """
         )
-    # year_cs, desc_cs = st.columns(2)
-    #
-    # with year_cs:
-    #     st.subheader("Oct-2004 - Jun-2012")
-    #     st.subheader("Company : [CSS Technergy Limited](http://cosyn.in/)")
-    #
-    # with desc_cs:
-    #     st.subheader("Desination : Programmer")
-    #     st.write(
-    #         """
-    #         - ✔️ Worked with software development and testing team members to design and develop robust solutions to meet client requirements for functionality, scalability, and performance.
-    #         - ✔️ Tested server code to validate code changes.
-    #         - ✔️ Improved software efficiency by creating automated scripts and tools.
-    #         - ✔️ Created databases, data entry systems, and other applications for diverse uses.
-    #         - ✔️ Analyzed, reviewed and revised programs to increase operating efficiency.
-    #         """
-    #     )
+    year_cs, desc_cs = st.columns(2)
+
+    with year_cs:
+        st.subheader("Oct-2004 - Jun-2012")
+        st.subheader("Company : [CSS Technergy Limited](http://cosyn.in/)")
+
+    with desc_cs:
+        st.subheader("Desination : Programmer")
+        st.write(
+            """
+            - ✔️ Worked with software development and testing team members to design and develop robust solutions to meet client requirements for functionality, scalability, and performance.
+            - ✔️ Tested server code to validate code changes.
+            - ✔️ Improved software efficiency by creating automated scripts and tools.
+            - ✔️ Created databases, data entry systems, and other applications for diverse uses.
+            - ✔️ Analyzed, reviewed and revised programs to increase operating efficiency.
+            """
+        )
 if selected == "Custom Projects":
     import streamlit as st
     import pandas
